@@ -2,27 +2,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type = "text/css" href="css/style.css">
+    <!-- google font flamenco -->
+    <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+    <!-- https://animate.style/   animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Lost Pier Cafe</title>
 </head>
 <body>
     <header>
         <nav>
-            <div class="row">
-                <img src="images/lostpierlogo.png" alt="logo">
-                <ul class="main-nav">
+            <div class="row clearfix">
+                <img src="images/lostpierlogo.png" alt="logo" class="logo">
+                <ul class="main-nav animate__animated animate__slideInDown" id = "checkClass">
                     <li><a href="#">cake delivery</a></li>
                     <li><a href="#">how to order</a></li>
                     <li><a href="#">check more</a></li>
                     <li><a href="#">sign up</a></li>
                 </ul>
+                <a href="#" class="mobile-icon" onclick="slideShow()"><i class="fas fa-bars"></i></a>
             </div>
         </nav>
 
         <div class="main-content-header">
-            <h1>Welcome to <span>My Cafe</span>.<br>House of Coffee and Cake Lovers.</h1>
+            <h1>Welcome to <span class="colorchange">Lost Pier Cafe</span>.<br>House of Coffee and Cake Lovers.</h1>
             <a href="#" class="btn btn-full">Click to order</a>
             <a href="#" class="btn btn-more">Show me more</a>
         </div>
     </header>
 </body>
+
+<script type="text/javascript">
+    function slideShow() {
+        let x = document.getElementById('checkClass');
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 </html>
